@@ -15,6 +15,7 @@ public class OrdersTransaction {
 			stmt.addBatch("INSERT into OrderDetail VALUES('JSmith', 'Broker131', '05/20/20')");
 			stmt.executeBatch();
 			conn.commit();
+			System.out.println("Transaction succeeded!");
 		} catch (SQLException se) {
 			System.out.println("SQLERROR: " + se.getMessage() + " code: " + se.getErrorCode());
 			try {
